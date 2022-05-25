@@ -1,0 +1,4 @@
+23:05:2022 - 19:11:20.132 INFO utility.Log [main] - User is going to Sign In
+23:05:2022 - 19:11:21.131 INFO utility.Log [main] - Enter username and Password
+23:05:2022 - 19:11:23.140 INFO utility.Log [main] - =====================================End Loging Test TEST END=========================================
+23:05:2022 - 19:11:23.144 TRACE websocketx.WebSocket08FrameEncoder [AsyncHttpClient-1-4] - Encoding WebSocket Frame opCode=8 length=26
