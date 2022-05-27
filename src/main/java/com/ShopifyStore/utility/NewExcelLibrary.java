@@ -199,7 +199,6 @@ public class NewExcelLibrary {
 
             row=sheet.getRow(0);
             for(int i=0;i<row.getLastCellNum();i++){
-                //System.out.println(row.getCell(i).getStringCellValue().trim());
                 if(row.getCell(i).getStringCellValue().trim().equals(colName))
                     colNum=i;
             }

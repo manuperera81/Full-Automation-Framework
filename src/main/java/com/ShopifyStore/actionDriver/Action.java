@@ -741,7 +741,7 @@ public class Action extends BaseClass  implements ActionInterface {
         String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
         TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
         File source = takesScreenshot.getScreenshotAs(OutputType.FILE);
-        String destination = System.getProperty("user.dir") + "\\ScreenShots\\" + filename + "_" + dateName + ".png";
+        String destination = System.getProperty("user.dir") + "\\src\\test\\Outputs\\Screenshots\\" + filename + "_" + dateName + ".png";
 
         try {
             FileUtils.copyFile(source, new File(destination));
@@ -749,7 +749,7 @@ public class Action extends BaseClass  implements ActionInterface {
             e.getMessage();
         }
         // This new path for jenkins
-        String newImageString = "http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/" + filename + "_"
+        String newImageString = "E:\\SteamLibrary\\Shopfiy Selenium Framwork\\src\\test\\Outputs\\Screenshots\\" + filename + "_"
                 + dateName + ".png";
         return newImageString;
     }

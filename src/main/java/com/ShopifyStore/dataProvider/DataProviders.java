@@ -33,7 +33,7 @@ public class DataProviders {
         return data;
     }
 
-    //Class --> AccountCreationPage  Test Case--> verifyCreateAccountPageTest
+
     @DataProvider(name = "email")
     public Object[][] getEmail() {
         // Totals rows count
@@ -52,7 +52,7 @@ public class DataProviders {
         return data;
     }
 
-    //Class --> AddToCartPageTest, EndToEndTest,  Test Case--> addToCartTest, endToEndTest
+
     @DataProvider(name = "getProduct")
     public Object[][] getProduct() {
         // Totals rows count
@@ -71,7 +71,7 @@ public class DataProviders {
         return data;
     }
 
-    // Class --> SearchResultPageTest, Test Case--> productAvailabilityTest
+
     @DataProvider(name = "searchProduct")
     public Object[][] getProductPrice() {
         // Totals rows count
