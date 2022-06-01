@@ -1,5 +1,1 @@
-27:05:2022 - 12:52:16.966 INFO utility.Log [main] - Enter username and Password
-27:05:2022 - 12:52:24.263 INFO utility.Log [main] - =====================================Search Product Test TEST START=========================================
-27:05:2022 - 12:52:24.264 INFO utility.Log [main] - User is going search for the new item
-27:05:2022 - 12:52:26.725 INFO utility.Log [main] - Enter term for the search
-27:05:2022 - 12:52:27.432 INFO utility.Log [main] - =====================================End Search Result  Test TEST END=========================================
+01:06:2022 - 10:55:15.884 TRACE websocketx.WebSocket08FrameEncoder [AsyncHttpClient-1-5] - Encoding WebSocket Frame opCode=8 length=26

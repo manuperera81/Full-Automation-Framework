@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite" parallel = "tests" >
+    <listeners>
+        <listener class-name = "com.ShopifyStore.utility.ListenerClass"></listener>
+    </listeners>
     <test thread-count ="3" verbose="2" preserve-order="true" name="ChromeTest">
         <parameter name="browser" value="Chrome"></parameter>
         <groups>
@@ -25,7 +28,7 @@
         </classes>
     </test>
 
-    <test thread-count ="5" verbose="2" preserve-order="true" name="IETest">
+    <!--<test thread-count ="5" verbose="2" preserve-order="true" name="IETest">
         <parameter name="browser" value="IE"></parameter>
         <groups>
             <run>
@@ -35,6 +38,6 @@
         <classes>
             <class name="com.Manitobah.testCases.LoginPageTest"></class>
         </classes>
-    </test>
+    </test>-->
 
 </suite>

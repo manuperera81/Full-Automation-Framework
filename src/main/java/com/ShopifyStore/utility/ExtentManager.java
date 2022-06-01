@@ -17,9 +17,6 @@ public class ExtentManager {
         htmlReporter= new ExtentHtmlReporter(System.getProperty("user.dir")+"\\src\\test\\Outputs\\ExtentReport\\"+"MyReport.html");
         System.out.println(System.getProperty("user.dir"));
         htmlReporter.loadXMLConfig(System.getProperty("user.dir")+"\\extent-config.xml");
-        //htmlReporter.config().setDocumentTitle("Automation Test Report");
-        //htmlReporter.config().setReportName("OrangeHRM Test Automation Report");
-        //htmlReporter.config().setTheme(Theme.DARK);
 
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);

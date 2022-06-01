@@ -17,7 +17,7 @@ public class LoginPageTest extends BaseTest {
     IndexPage indexPage;
 
     @Test(dataProvider = "credentials", dataProviderClass = DataProviders.class, groups ={"Sanity","Smoke"})
-    public void logintest(String username, String password){
+    public void logintest(String username, String password) {
         Log.startTestCase("Login Test");
         indexPage = new IndexPage();
 

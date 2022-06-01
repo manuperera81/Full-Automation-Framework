@@ -63,6 +63,7 @@ public class IndexPage extends BaseClass {
     public SearchResultPage enterSearchterm(String searchKeyWord){
         action.type(searchfield,searchKeyWord);
         action.enter(searchfield);
+        action.implicitWait(getDriver(),5000);
         return new SearchResultPage();
     }
 

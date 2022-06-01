@@ -5,10 +5,9 @@
         <listener class-name = "com.ShopifyStore.utility.ListenerClass"></listener>
     </listeners>
     <test thread-count ="5" verbose="2" preserve-order="true" name="E:/SteamLibrary/Shopfiy Selenium Framwork">
-        <parameter name="browser" value="Firefox"></parameter>
+        <parameter name="browser" value="Chrome"></parameter>
         <classes>
-            <class name="com.Manitobah.testCases.LoginPageTest"></class>
-            <class name="com.Manitobah.testCases.SearchPageTest"></class>
+         <class name="com.Manitobah.testCases.SearchPageTest"></class>
         </classes>
     </test>
 </suite>

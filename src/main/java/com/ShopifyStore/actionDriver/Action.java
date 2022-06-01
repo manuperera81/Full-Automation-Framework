@@ -723,7 +723,7 @@ public class Action extends BaseClass  implements ActionInterface {
     }
     @Override
     public void implicitWait(WebDriver driver, int timeOut) {
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(timeOut, TimeUnit.SECONDS);
     }
 
     @Override
