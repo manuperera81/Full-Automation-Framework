@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 
 public class IndexPage extends BaseClass {
 
@@ -29,6 +31,12 @@ public class IndexPage extends BaseClass {
 
     @FindBy(xpath= "//title")
     WebElement headtitle;
+
+    @FindBy(xpath ="//*[@id='SiteHeader']//li/a")
+    List<WebElement> topNevBar;
+
+    @FindBy(xpath ="//a[contains(text(),'Best Sellers')]")
+    List<WebElement> bestSellerItems;
 
 
     public IndexPage() {
@@ -65,6 +73,14 @@ public class IndexPage extends BaseClass {
         action.enter(searchfield);
         action.implicitWait(getDriver(),5000);
         return new SearchResultPage();
+    }
+
+    public void hoverTopNavBar(int navbarOrder){
+        action.mouseHoverByJavaScript(topNevBar.get(navbarOrder));
+    }
+
+    public void selectBestSellers(){
+        action.click(getDriver(),bestSellerItems.get(1));
     }
 
 }

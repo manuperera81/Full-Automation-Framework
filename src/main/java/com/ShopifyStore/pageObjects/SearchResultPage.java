@@ -19,6 +19,9 @@ public class SearchResultPage extends BaseClass {
     @FindBy(xpath="//h2[@class='section-header__title']")
     WebElement resultNumber;
 
+    @FindBy(xpath = "//a[@title='Next']")
+    WebElement nextPageLink;
+
     public SearchResultPage(){
         PageFactory.initElements(getDriver(),this);
     }
@@ -28,9 +31,18 @@ public class SearchResultPage extends BaseClass {
         return new ProductPage();
     }
 
-    public int resutlsCount(){
+    public int pageOneCount() {
+        int PageOnecount = resultProducts.size();
+        return PageOnecount;
+    }
+    public int pageTwoAndBeyondCount()   {
+        int NextPageItemCount = 0;
 
-        return resultProducts.size();
+        if (nextPageLink.isDisplayed()) {
+            nextPageLink.click();
+            NextPageItemCount = +resultProducts.size();
+        }
+        return  NextPageItemCount;
     }
 
     public int displayResutlCount(){

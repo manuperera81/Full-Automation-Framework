@@ -17,6 +17,8 @@ public class LoginPageTest extends BaseTest {
     IndexPage indexPage;
 
     @Test(dataProvider = "credentials", dataProviderClass = DataProviders.class, groups ={"Sanity","Smoke"})
+    //this test is failed because it meets the reCAPTCHA for avoid automation. Expected on https://www.manitobah.com/challenge URL to Verify
+    //This reCAPTCGA Verfiy with the Chrome browers and it gives the resutls test as passed
     public void logintest(String username, String password) {
         Log.startTestCase("Login Test");
         indexPage = new IndexPage();
@@ -32,7 +34,7 @@ public class LoginPageTest extends BaseTest {
         String acturalURL = myAccountPage.getCurrentUrl();
         String expectedURL = "https://www.manitobah.com/challenge";
         Assert.assertEquals(acturalURL, expectedURL);
-        //this test is failed because it meets the reCAPTCHA for avoid automation. Expected on https://www.manitobah.com/challenge URL to Verify
+
         Log.endTestCase("End Loging Test");
     }
 }

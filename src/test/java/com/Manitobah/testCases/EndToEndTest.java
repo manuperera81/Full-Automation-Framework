@@ -4,30 +4,31 @@ import com.Manitobah.base.BaseTest;
 import com.ShopifyStore.pageObjects.IndexPage;
 import com.ShopifyStore.pageObjects.SearchResultPage;
 import com.ShopifyStore.utility.Log;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 /**
- * @author manup on 5/23/2022
+ * @author manup on 6/24/2022
  */
-public class SearchPageTest extends BaseTest {
+public class EndToEndTest extends BaseTest {
     IndexPage indexPage;
     SearchResultPage searchResultPage;
 
-    @Test(groups = "Sanity")
+    @Test(groups = "Regression")
     public void searchProductTest() {
+        Log.startTestCase("Search Product Test");
+        indexPage = new IndexPage();
+
         Log.info("User is going search for the new item");
         indexPage.clickOnSearchBtn();
-        searchResultPage = indexPage.enterSearchterm("Shoes");
 
         Log.info("Enter term for the search");
-        int resultShown = searchResultPage.displayResutlCount();
+        searchResultPage = indexPage.enterSearchterm("Shoes");
 
-        int pageOneResults = searchResultPage.pageOneCount();
+        Log.info("Click on the product");
 
-        int actualResultShown = searchResultPage.pageTwoAndBeyondCount() + pageOneResults;
 
-        Assert.assertEquals(resultShown, actualResultShown);
+
+
 
         Log.endTestCase("End Search Result  Test");
     }

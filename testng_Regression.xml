@@ -4,17 +4,17 @@
     <listeners>
         <listener class-name = "com.ShopifyStore.utility.ListenerClass"></listener>
     </listeners>
-    <test thread-count ="5"  verbose="2" preserve-order="true" name="Smoke">
+    <test thread-count ="5"  verbose="2" preserve-order="true" name="Regression">
         <parameter name="browser" value="Chrome"></parameter>
         <groups>
             <run>
-                <include name="Sanity"></include>
+                <include name="Regression"></include>
             </run>
         </groups>
         <classes>
             <class name="com.Manitobah.testCases.LoginPageTest"></class>
             <class name="com.Manitobah.testCases.SearchPageTest"></class>
-            <class name="com.Manitobah.testCases.SearchPageTest"></class>
+            <class name="com.Manitobah.testCases.EndToEndTest"></class>
         </classes>
     </test>
 </suite>

@@ -1,1 +1,4 @@
-01:06:2022 - 10:55:15.884 TRACE websocketx.WebSocket08FrameEncoder [AsyncHttpClient-1-5] - Encoding WebSocket Frame opCode=8 length=26
+27:06:2022 - 15:54:04.047 INFO utility.Log [main] - User is going search for the new item
+27:06:2022 - 15:54:07.625 INFO utility.Log [main] - Enter term for the search
+27:06:2022 - 15:54:08.393 INFO utility.Log [main] - =====================================End Search Result  Test TEST END=========================================
+27:06:2022 - 15:54:08.406 TRACE websocketx.WebSocket08FrameEncoder [AsyncHttpClient-1-4] - Encoding WebSocket Frame opCode=8 length=26
