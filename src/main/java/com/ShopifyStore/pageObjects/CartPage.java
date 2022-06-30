@@ -18,12 +18,19 @@ public class CartPage extends BaseClass {
     @FindBy(name = "checkout")
     WebElement checkOutBtn;
 
+    @FindBy(xpath = "//button[@aria-label = 'Increase item quantity by one']")
+    WebElement increaseItemQuantityBtn;
+
     public CartPage(){
         PageFactory.initElements(getDriver(),this);
     }
 
-    public void clickCheckOut(){
+    public void increaseQuantity(){
+        action.click(getDriver(),increaseItemQuantityBtn);
+    }
+    public InformationPage clickCheckOut(){
         action.click(getDriver(),checkOutBtn);
+        return new InformationPage();
     }
 
 

@@ -29,6 +29,9 @@ public class InformationPage extends BaseClass {
     @FindBy(id = "continue_button")
     WebElement continueBtn;
 
+    @FindBy(xpath = "//h2[@id ='main-header']")
+    WebElement mainTitle;
+
     public InformationPage(){
         PageFactory.initElements(getDriver(),this);
     }
@@ -48,6 +51,12 @@ public class InformationPage extends BaseClass {
 
     public void clickContinueButton(){
         action.click(getDriver(),continueBtn);
+    }
+
+    public String getMainTitle(){
+        String mainTitleText = mainTitle.getText();
+        System.out.println(mainTitleText);
+        return mainTitleText;
     }
 
 }

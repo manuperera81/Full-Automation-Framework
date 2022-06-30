@@ -26,9 +26,9 @@ public class SearchResultPage extends BaseClass {
         PageFactory.initElements(getDriver(),this);
     }
 
-    public ProductPage clickOnProduct(){
-        action.click(getDriver(),resultProducts.get(1));
-        return new ProductPage();
+    public SingleProductPage clickOnProduct(){
+        action.click(getDriver(),resultProducts.get(0));
+        return new SingleProductPage();
     }
 
     public int pageOneCount() {
@@ -49,5 +49,7 @@ public class SearchResultPage extends BaseClass {
         String displayNumber = resultNumber.getText();
         return Integer.parseInt(displayNumber.replaceAll("[^0-9]", ""));
     }
+
+
 
 }
