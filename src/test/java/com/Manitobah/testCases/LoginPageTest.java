@@ -5,6 +5,7 @@ import com.ShopifyStore.dataProvider.DataProviders;
 import com.ShopifyStore.pageObjects.IndexPage;
 import com.ShopifyStore.pageObjects.LoginPage;
 import com.ShopifyStore.pageObjects.MyAccountPage;
+import com.ShopifyStore.utility.EncodingAndDecoding;
 import com.ShopifyStore.utility.Log;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -15,10 +16,13 @@ import org.testng.annotations.Test;
 
 public class LoginPageTest extends BaseTest {
     IndexPage indexPage;
+    EncodingAndDecoding decodeingStr;
 
     @Test(dataProvider = "credentials", dataProviderClass = DataProviders.class, groups ={"Sanity","Smoke"})
+
     //this test is failed because it meets the reCAPTCHA for avoid automation. Expected on https://www.manitobah.com/challenge URL to Verify
     //This reCAPTCGA Verfiy with the Chrome browers and it gives the resutls test as passed
+
     public void logintest(String username, String password) {
         Log.startTestCase("Login Test");
         indexPage = new IndexPage();
@@ -27,8 +31,11 @@ public class LoginPageTest extends BaseTest {
         LoginPage loginPage = indexPage.clickOnSignin();
 
         Log.info("Enter username and Password");
-        //MyAccountPage myAccountPage = loginPage.login(prop.getProperty("username"),prop.getProperty("password"));
-        MyAccountPage myAccountPage = loginPage.login(username,password);
+        // This is password decode to readable string.
+        decodeingStr =  new EncodingAndDecoding();
+        String  decodeingPW = decodeingStr.decodedString(password);
+
+        MyAccountPage myAccountPage = loginPage.login(username,decodeingPW);
 
 
         String acturalURL = myAccountPage.getCurrentUrl();

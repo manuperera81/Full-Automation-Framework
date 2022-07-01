@@ -179,7 +179,7 @@ public class NewExcelLibrary {
         }
     }
 
-    // returns true if data is set successfully else false
+
     public boolean setCellData(String sheetName,String colName,int rowNum, String data){
         try{
             fis = new FileInputStream(path);
