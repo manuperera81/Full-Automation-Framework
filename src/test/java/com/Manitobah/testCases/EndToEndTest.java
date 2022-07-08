@@ -33,7 +33,7 @@ public class EndToEndTest extends BaseTest {
         singleProductPage = searchResultPage.clickOnProduct();
 
         Log.info("Select the product Size");
-        singleProductPage.selectSize(11);
+        singleProductPage.selectSize(9);
 
         Log.info("Add the product to the cart");
         cartPage=  singleProductPage.addToCart();

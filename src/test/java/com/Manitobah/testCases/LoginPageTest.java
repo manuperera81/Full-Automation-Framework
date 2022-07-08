@@ -18,7 +18,7 @@ public class LoginPageTest extends BaseTest {
     IndexPage indexPage;
     EncodingAndDecoding decodeingStr;
 
-    @Test(dataProvider = "credentials", dataProviderClass = DataProviders.class, groups ={"Sanity","Smoke"})
+    @Test(dataProvider = "credentials", dataProviderClass = DataProviders.class, groups ={"Smoke"})
 
     //this test is failed because it meets the reCAPTCHA for avoid automation. Expected on https://www.manitobah.com/challenge URL to Verify
     //This reCAPTCGA Verfiy with the Chrome browers and it gives the resutls test as passed

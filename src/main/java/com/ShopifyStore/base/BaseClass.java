@@ -7,8 +7,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.Browser;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -41,6 +45,37 @@ public class BaseClass {
             WebDriverManager.edgedriver().setup();
             driver.set(new EdgeDriver());
         }
+        else if (browserName.equalsIgnoreCase("remote-chrome")) {
+            try {
+                DesiredCapabilities caps = new DesiredCapabilities();
+                caps.setBrowserName(Browser.CHROME.browserName());
+                caps.setVersion("101");
+                driver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), caps));
+            } catch (MalformedURLException e) {
+                e.getMessage();
+            }
+        } else if (browserName.equalsIgnoreCase("remote-firefox")) {
+            try {
+                DesiredCapabilities caps = new DesiredCapabilities();
+                caps.setBrowserName(Browser.FIREFOX.browserName());
+                caps.setVersion("99");
+                driver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), caps));
+            } catch (MalformedURLException e) {
+                e.getMessage();
+            }
+        } else if (browserName.equalsIgnoreCase("remote-edge")) {
+            try {
+                DesiredCapabilities caps = new DesiredCapabilities();
+                caps.setBrowserName(Browser.EDGE.browserName());
+                caps.setVersion("100");
+                driver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), caps));
+            } catch (MalformedURLException e) {
+               e.getMessage();
+            }
+        } else {
+        System.out.println("Browser value is not defined correctly! It should be either chrome, firefox, edge or opera!");
+    }
+
 
         getDriver().manage().window().maximize();
         //Delete all the cookies

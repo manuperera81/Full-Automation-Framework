@@ -1,4 +1,2 @@
-30:06:2022 - 11:07:08.515 INFO utility.Log [main] - User is going to Sign In
-30:06:2022 - 11:07:09.592 INFO utility.Log [main] - Enter username and Password
-30:06:2022 - 11:07:11.354 INFO utility.Log [main] - =====================================End Loging Test TEST END=========================================
-30:06:2022 - 11:07:11.368 TRACE websocketx.WebSocket08FrameEncoder [AsyncHttpClient-1-4] - Encoding WebSocket Frame opCode=8 length=26
+07:07:2022 - 21:48:33.272 INFO utility.Log [TestNG-tests-3] - Add the product to the cart
+07:07:2022 - 21:48:34.266 INFO utility.Log [TestNG-tests-3] - Increase item quantity by one

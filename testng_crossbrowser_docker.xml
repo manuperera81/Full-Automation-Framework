@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel = "tests"  thread-count="3" verbose="2" >
+    <listeners>
+        <listener class-name = "com.ShopifyStore.utility.ListenerClass"></listener>
+    </listeners>
+    <test thread-count ="3" verbose="2" preserve-order="true" name="ChromeTest">
+        <parameter name="browser" value="remote-chrome"></parameter>
+        <groups>
+            <run>
+                <include name="Regression"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.Manitobah.testCases.LoginPageTest"></class>
+            <class name="com.Manitobah.testCases.SearchPageTest"></class>
+            <class name="com.Manitobah.testCases.EndToEndTest"></class>
+        </classes>
+    </test>
+
+    <test thread-count ="5" verbose="2" preserve-order="true" name="FirefoxTest">
+        <parameter name="browser" value="remote-firefox"></parameter>
+        <groups>
+            <run>
+                <include name="Regression"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.Manitobah.testCases.LoginPageTest"></class>
+            <class name="com.Manitobah.testCases.SearchPageTest"></class>
+            <class name="com.Manitobah.testCases.EndToEndTest"></class>
+        </classes>
+    </test>
+
+    <test thread-count ="5" verbose="2" preserve-order="true" name="EdgeTest">
+        <parameter name="browser" value="remote-edge"></parameter>
+        <groups>
+            <run>
+                <include name="Regression"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.Manitobah.testCases.LoginPageTest"></class>
+            <class name="com.Manitobah.testCases.SearchPageTest"></class>
+            <class name="com.Manitobah.testCases.EndToEndTest"></class>
+        </classes>
+    </test>
+
+
+
+</suite>

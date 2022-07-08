@@ -30,15 +30,16 @@ public class SingleProductPage extends BaseClass {
     public void selectSize(int size){
         String sizeText = sizeOfproduct.get(0).getText();
         String[] sizeType = sizeText.split(" ");
-        System.out.println(sizeText);
+
         String sizeGender = sizeType[0];
         String xpathWithSize  = String.format("//label[contains(text(), '%s %s')][@class='variant__button-label']",sizeGender,size);
-        System.out.println(xpathWithSize);
+
         WebElement sizeLable = getDriver().findElement(By.xpath(xpathWithSize));
         action.click(getDriver(),sizeLable);
     }
 
     public CartPage addToCart(){
+        action.scrollByVisibilityOfElement(getDriver(),addToCartBtn);
         action.click(getDriver(),addToCartBtn);
         return new CartPage();
     }
