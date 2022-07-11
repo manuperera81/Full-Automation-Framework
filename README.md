@@ -1,6 +1,6 @@
 # Full-Automation-Framework
 
-In this project, I developed the full automation framwork for  End to End Testing using Selenium WebDriver and Java.
+In this project, I developed the full automation framwork for End to End Testing using **Selenium WebDriver and Java**.
 
 The main focal point is the ceate maminfram for the ecomeecrce web autmation. The site used is a popular Shopfiy Store.
 
@@ -11,4 +11,4 @@ The framework contains :
   - use the correct method and Alies in the class method parameter.
 * Extenet Reports.
 * All the test run on the .xml files.
-* Docker Integration for cross-browser testing.
+* *Docker Integration* for cross-browser testing.
